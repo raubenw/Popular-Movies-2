@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Specify the sort order -->
+    <string-array name="sort_by_entries">
+        <item>Most popular</item>
+        <item>Highest rated</item>
+    </string-array>
+
+    <string-array name="sort_by_values">
+        <item>popularity.desc</item>
+        <item>vote_average.desc</item>
+    </string-array>
+    <!-- End sort order -->
+
+    <!-- Show all movies or only favourites -->
+    <string-array name="show_movie_entries">
+        <item>All movies</item>
+        <item>My favourites</item>
+    </string-array>
+
+    <string-array name="show_movie_values">
+        <item>all_movies</item>
+        <item>my_favourites</item>
+    </string-array>
+    <!-- End show all or favourites -->
+
+
+</resources>
