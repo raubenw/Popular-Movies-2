@@ -1,152 +1,151 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wernerraubenheimer.popularmovies.DetailActivityFragment">
 
-    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.wernerraubenheimer.popularmovies.DetailActivityFragment">
+        android:background="@color/detail_linearlayout_background"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/originalTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@color/detail_textview_background"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/movie_text_padding_top_bottom"
+            android:paddingLeft="@dimen/movie_text_padding_left_right"
+            android:paddingRight="@dimen/movie_text_padding_left_right"
+            android:paddingTop="@dimen/movie_text_padding_top_bottom"
+            android:textColor="@color/detail_heading_text"
+            android:textSize="@dimen/movie_text_title_heading"
+            android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ffffff"
-            android:focusableInTouchMode="true"
-            android:orientation="vertical">
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/details_linearlayout_container_toppadding">
 
-
-            <TextView
-                android:id="@+id/originalTitle"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:background="#ff2322ff"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:paddingBottom="25dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingTop="25dp"
-                android:textColor="#ffffffff"
-                android:textSize="28sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/posterImageView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:paddingLeft="@dimen/details_properties_leftpadding" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:orientation="horizontal"
-                android:paddingTop="10dp">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/releaseDateView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/details_properties_leftpadding"
+                    android:textColor="@color/detail_content_text"
+                    android:textSize="@dimen/details_properties_content_size" />
+
+                <TextView
+                    android:id="@+id/averageScoreRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/details_properties_leftpadding"
+                    android:paddingTop="@dimen/details_properties_toppadding"
+                    android:textColor="@color/detail_content_text"
+                    android:textSize="@dimen/details_properties_content_size" />
+
+                <TextView
+                    android:id="@+id/popularityRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/details_properties_leftpadding"
+                    android:paddingTop="@dimen/details_properties_toppadding"
+                    android:textColor="@color/detail_content_text"
+                    android:textSize="@dimen/details_properties_content_size" />
 
                 <ImageView
-                    android:id="@+id/posterImageView"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:paddingLeft="15dp" />
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/releaseDateView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="15dp"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/averageScoreRating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="15dp"
-                        android:paddingTop="10dp"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/popularityRating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="15dp"
-                        android:paddingTop="10dp"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-
-                    <ImageView
-                        android:id="@+id/star_view"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="18dp"
-                        android:paddingLeft="15dp" />
-                </LinearLayout>
-
+                    android:id="@+id/star_view"
+                    android:layout_width="@dimen/star_width"
+                    android:layout_height="@dimen/star_height"
+                    android:layout_marginTop="@dimen/star_paddingtop"
+                    android:paddingLeft="@dimen/details_properties_leftpadding" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/overView_heading"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:paddingLeft="15dp"
-                android:paddingRight="10dp"
-                android:text="@string/overview_heading"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:visibility="invisible" />
+        </LinearLayout>
 
-            <TextView
-                android:id="@+id/overView"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:paddingLeft="15dp"
-                android:paddingRight="10dp"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:visibility="invisible" />
+        <TextView
+            android:id="@+id/overView_heading"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:paddingLeft="@dimen/details_properties_leftpadding"
+            android:paddingRight="@dimen/details_properties_toppadding"
+            android:text="@string/overview_heading"
+            android:textColor="@color/detail_content_text"
+            android:textSize="@dimen/details_properties_headings_size"
+            android:visibility="invisible" />
 
-            <TextView
-                android:id="@+id/reviews_heading"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:paddingLeft="15dp"
-                android:paddingRight="10dp"
-                android:paddingTop="15dp"
-                android:text="@string/reviews_heading"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:visibility="invisible" />
+        <TextView
+            android:id="@+id/overView"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:paddingLeft="@dimen/details_properties_leftpadding"
+            android:paddingRight="@dimen/details_heading_paddingright"
+            android:textColor="@color/detail_content_text"
+            android:textSize="@dimen/details_properties_content_size"
+            android:visibility="invisible" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_reviews"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="invisible"></android.support.v7.widget.RecyclerView>
+        <TextView
+            android:id="@+id/reviews_heading"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:paddingLeft="@dimen/details_properties_leftpadding"
+            android:paddingRight="@dimen/details_heading_paddingright"
+            android:paddingTop="@dimen/details_heading_paddingtop"
+            android:text="@string/reviews_heading"
+            android:textColor="@color/detail_content_text"
+            android:textSize="@dimen/details_properties_headings_size"
+            android:visibility="invisible" />
 
-            <TextView
-                android:id="@+id/trailers_heading"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:paddingLeft="15dp"
-                android:paddingRight="10dp"
-                android:paddingTop="15dp"
-                android:text="@string/trailers_heading"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:visibility="invisible" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"></android.support.v7.widget.RecyclerView>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_trailers"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="invisible">
+        <TextView
+            android:id="@+id/trailers_heading"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:paddingLeft="@dimen/details_properties_leftpadding"
+            android:paddingRight="@dimen/details_heading_paddingright"
+            android:paddingTop="@dimen/details_heading_paddingtop"
+            android:text="@string/trailers_heading"
+            android:textColor="@color/detail_content_text"
+            android:textSize="@dimen/details_properties_headings_size"
+            android:visibility="invisible" />
 
-            </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_trailers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
 
-       </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
