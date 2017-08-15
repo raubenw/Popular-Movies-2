@@ -14,10 +14,15 @@
     <string name="pref_sort_by_key">sort_by</string>
     <string name="pref_sort_by_default_value">popularity.desc</string>
     <string name="value_default_sort_by">popularity.desc</string>
+    <string name="value_sort_by_top_rated">vote_average.desc</string>
 
     <string name="pref_show_which_label">Show all or favourites</string>
     <string name="pref_show_which_key">all_favourites</string>
     <string name="pref_show_by_default_value">all_movies</string>
+
+    <!-- FetchMoviesTask -->
+    <string name="sort_by_top_rated">top_rated</string>
+    <string name="sort_by_popular">popular</string>
 
     <!-- Images sizes-->
     <string name="image_size_original">original</string>
@@ -30,7 +35,7 @@
 
     <!-- Image base URL -->
     <string name="image_base_url">http://image.tmdb.org/t/p/</string>
-    <string name="title_activity_detail">Movie Detail</string>
+    <string name="title_activity_detail">Movie Title</string>
 
     <!-- Social share -->
     <string name="action_share">Share</string>

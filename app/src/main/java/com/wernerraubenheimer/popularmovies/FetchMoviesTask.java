@@ -26,9 +26,10 @@ import java.util.Vector;
  * Created by wernerr on 2015/09/25.
  */
 public class FetchMoviesTask extends AsyncTask<String, Void, Void> {
+
         private final String LOG_TAG = FetchMoviesTask.class.getSimpleName();
 
-        private final String MOVIE_BASE_URL = "http://api.themoviedb.org/3/discover/movie?";
+        private final String MOVIE_BASE_URL = "http://api.themoviedb.org/3/movie";
         private final String PARAM_SORT_BY = "sort_by";
         private final String PARAM_API_KEY = "api_key";
 
@@ -150,8 +151,18 @@ public class FetchMoviesTask extends AsyncTask<String, Void, Void> {
 
         @Override
         protected Void doInBackground(String... params) {
+
+            final String SORT_BY_TOP_RATED =  mContext.getString(R.string.value_sort_by_top_rated);
+            final String SORT_BY_POPULAR = mContext.getString(R.string.value_default_sort_by);
+            String sortPath="";
             //Build the URL string using the URIBuilder class
+            if (params[0].equals(SORT_BY_POPULAR)) {
+                sortPath = mContext.getString(R.string.sort_by_popular);
+            } else if (params[0].equals(SORT_BY_TOP_RATED)) {
+                sortPath = mContext.getString(R.string.sort_by_top_rated);
+            }
             Uri uriBuilder = Uri.parse(MOVIE_BASE_URL).buildUpon()
+                    .appendPath(sortPath)
                     .appendQueryParameter(PARAM_API_KEY, BuildConfig.MOVIES_API_KEY)
                     .build();
 
